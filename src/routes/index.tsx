@@ -24,17 +24,60 @@ import heroDashboard from "@/assets/hero-dashboard.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DairyPro ERP — Smart Dairy Management & Ledger Platform" },
+      { title: "DairyPro ERP — Fat/SNF Pricing & Smart Milk Ledger" },
       {
         name: "description",
         content:
-          "Automate milk collection, Fat/SNF price matching, and one-tap settlements. Built for dairies and farmers across rural India.",
+          "Automate milk collection, instant Fat/SNF price matching, and one-tap settlements. Offline-ready dairy ERP for owners and farmers across India.",
       },
-      { property: "og:title", content: "DairyPro ERP — Smart Dairy Management" },
+      { property: "og:title", content: "DairyPro ERP — Fat/SNF Pricing & Smart Milk Ledger" },
       {
         property: "og:description",
         content:
-          "The smart ERP for modern dairies & farmers. Algorithmic pricing, transparent ledgers, offline-ready.",
+          "Algorithmic Fat/SNF pricing, transparent ledgers, one-tap settlements. Built for rural India, works on 2G.",
+      },
+      { property: "og:url", content: "https://dairyproerp.lovable.app/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "DairyPro ERP — Fat/SNF Pricing & Smart Milk Ledger" },
+      {
+        name: "twitter:description",
+        content:
+          "Algorithmic Fat/SNF pricing, transparent ledgers, one-tap settlements for dairies and farmers.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "https://dairyproerp.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "DairyPro ERP",
+          url: "https://dairyproerp.lovable.app",
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+91-98765-43210",
+            contactType: "sales",
+            areaServed: "IN",
+            availableLanguage: ["English", "Hindi"],
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "DairyPro ERP",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, Android",
+          description:
+            "Smart dairy ERP with Fat/SNF algorithmic pricing, ledger, inventory and one-tap settlements.",
+          offers: [
+            { "@type": "Offer", name: "Pilot", price: "0", priceCurrency: "INR" },
+            { "@type": "Offer", name: "Growth", price: "2499", priceCurrency: "INR" },
+          ],
+        }),
       },
     ],
   }),
@@ -349,15 +392,18 @@ function SliderRow({
 }) {
   const pct = ((value - min) / (max - min)) * 100;
   const trackColor = color === "primary" ? "var(--color-primary)" : "var(--color-success)";
+  const inputId = `slider-${label.replace(/[^a-z0-9]/gi, "-").toLowerCase()}`;
   return (
     <div>
       <div className="mb-2 flex items-baseline justify-between">
-        <span className="text-sm font-semibold text-foreground">{label}</span>
+        <label htmlFor={inputId} className="text-sm font-semibold text-foreground">{label}</label>
         <span className="text-2xl font-bold tabular-nums" style={{ color: trackColor }}>
           {value.toFixed(1)}{suffix}
         </span>
       </div>
       <input
+        id={inputId}
+        aria-label={label}
         type="range"
         min={min}
         max={max}
@@ -650,14 +696,17 @@ function CTASection() {
               className="space-y-3 rounded-2xl border border-border bg-background p-6"
             >
               <input
+                aria-label="Your name"
                 placeholder="Your name"
                 className="h-11 w-full rounded-lg border border-input bg-background px-4 text-sm outline-none focus:border-primary"
               />
               <input
+                aria-label="Phone number"
                 placeholder="Phone number"
                 className="h-11 w-full rounded-lg border border-input bg-background px-4 text-sm outline-none focus:border-primary"
               />
               <input
+                aria-label="Dairy location"
                 placeholder="Dairy location (Indore, Bhopal…)"
                 className="h-11 w-full rounded-lg border border-input bg-background px-4 text-sm outline-none focus:border-primary"
               />
