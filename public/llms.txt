@@ -1,0 +1,7 @@
+# DairyPro ERP
+
+> Smart dairy management and ledger platform for collection centers and milk farmers across India. Features Fat/SNF algorithmic pricing, transparent ledgers, cattle feed inventory, and one-tap settlements. Offline-ready and works on 2G.
+
+## Pages
+
+- [Home](/): Product overview, live Fat/SNF pricing calculator, owner & farmer features, pricing tiers, and contact.
