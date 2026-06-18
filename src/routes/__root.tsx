@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "DairyPro ERP automates milk collection, Fat/SNF price matching, and one-tap settlements for dairies and farmers across India.",
       },
       { name: "author", content: "DairyPro" },
-      { property: "og:title", content: "DairyPro ERP — Smart Dairy Management" },
+      { property: "og:title", content: "DairyPro ERP — Smart Dairy Management & Ledger Platform" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "DairyPro ERP — Smart Dairy Management & Ledger Platform" },
+      { name: "description", content: "Generates a professional B2B SaaS landing page for DairyPro ERP, a dairy management and smart ledger platform." },
+      { property: "og:description", content: "Generates a professional B2B SaaS landing page for DairyPro ERP, a dairy management and smart ledger platform." },
+      { name: "twitter:description", content: "Generates a professional B2B SaaS landing page for DairyPro ERP, a dairy management and smart ledger platform." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b6aa6e6-01db-4e71-b477-1110ce37c4c3/id-preview-c5a9e8e1--ec03a0e9-98c5-43f8-8390-3c34e9f721a4.lovable.app-1781782538134.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b6aa6e6-01db-4e71-b477-1110ce37c4c3/id-preview-c5a9e8e1--ec03a0e9-98c5-43f8-8390-3c34e9f721a4.lovable.app-1781782538134.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
