@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const APK_URL =
-  "https://www.dropbox.com/scl/fi/zbl6l1pamdkv7st4ejrwa/app-release.apk?rlkey=0v4vqe1n414mbgq3byl6v0dao&st=gue8nc19&dl=1";
+  "https://www.dropbox.com/scl/fi/etxqrxgs05ab4lbknga8b/dairypro.apk?rlkey=jxkhtjifot7kefpys3xhbpxk3&st=zhz8sjaw&dl=1";
 import { Button } from "@/components/ui/button";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
