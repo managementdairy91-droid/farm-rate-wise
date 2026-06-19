@@ -223,7 +223,12 @@ function Hero({ t }: { t: typeof copy.en }) {
               {t.cta.demo}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="h-12 rounded-full px-6 text-base">
+            <Button asChild size="lg" variant="outline" className="h-12 rounded-full px-6 text-base">
+              <a href={APK_URL} target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4" /> Download App
+              </a>
+            </Button>
+            <Button size="lg" variant="ghost" className="h-12 rounded-full px-6 text-base">
               <Play className="h-4 w-4" /> {t.cta.watch}
             </Button>
           </div>
