@@ -17,7 +17,11 @@ import {
   Phone,
   MapPin,
   Sparkles,
+  Download,
 } from "lucide-react";
+
+const APK_URL =
+  "https://www.dropbox.com/scl/fi/oe5e8vkxkdwl5t4lbyshx/app-release.apk?rlkey=vz6s0av3dtf4mkb8yelpxmlle&st=7isov5xr&e=1&dl=1";
 import { Button } from "@/components/ui/button";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
@@ -219,7 +223,12 @@ function Hero({ t }: { t: typeof copy.en }) {
               {t.cta.demo}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="h-12 rounded-full px-6 text-base">
+            <Button asChild size="lg" variant="outline" className="h-12 rounded-full px-6 text-base">
+              <a href={APK_URL} target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4" /> Download App
+              </a>
+            </Button>
+            <Button size="lg" variant="ghost" className="h-12 rounded-full px-6 text-base">
               <Play className="h-4 w-4" /> {t.cta.watch}
             </Button>
           </div>
@@ -735,11 +744,19 @@ function Footer() {
           <span className="font-semibold text-foreground">DairyPro ERP</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap items-center gap-6">
           <a href="#features" className="hover:text-foreground">Features</a>
           <a href="#pricing" className="hover:text-foreground">Pricing</a>
           <a href="#contact" className="hover:text-foreground">Contact</a>
           <a href="#" className="hover:text-foreground">Privacy</a>
+          <a
+            href={APK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 font-medium text-primary-foreground hover:opacity-90"
+          >
+            <Download className="h-3.5 w-3.5" /> Download App
+          </a>
         </div>
       </div>
     </footer>
