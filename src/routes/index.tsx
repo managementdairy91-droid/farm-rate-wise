@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const APK_URL =
-  "https://www.dropbox.com/scl/fi/oe5e8vkxkdwl5t4lbyshx/app-release.apk?rlkey=vz6s0av3dtf4mkb8yelpxmlle&st=7isov5xr&e=1&dl=1";
+  "https://www.dropbox.com/scl/fi/dfrpweaoubbotuf75pgd0/app-release.apk?rlkey=dr74bv4n0s1z3djhoi2pnjlnq&st=zzmlrbep&dl=1";
 import { Button } from "@/components/ui/button";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
