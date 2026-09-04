@@ -748,7 +748,11 @@ function Footer() {
           <a href="#features" className="hover:text-foreground">Features</a>
           <a href="#pricing" className="hover:text-foreground">Pricing</a>
           <a href="#contact" className="hover:text-foreground">Contact</a>
-          <a href="#" className="hover:text-foreground">Privacy</a>
+          <Link to="/privacy" className="hover:text-foreground">Privacy</Link>
+          <Link to="/terms" className="hover:text-foreground">Terms</Link>
+          <Link to="/refunds" className="hover:text-foreground">Refunds</Link>
+          <Link to="/support" className="hover:text-foreground">Support</Link>
+          <Link to="/delete-account" className="hover:text-foreground">Delete Account</Link>
           <a
             href={APK_URL}
             target="_blank"
